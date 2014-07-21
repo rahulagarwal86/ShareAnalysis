@@ -7,7 +7,7 @@ import unittest
 #Function to find max share price for each company with year and month details
 def get_share_data(file_path=None):
     if not file_path:
-        file_path = raw_input("Enter your file path: ")
+        file_path = raw_input("\nEnter your file path: ")
         #File Validation Check
         #1. Check if file exist
         #2. Check the format of file
@@ -34,9 +34,9 @@ def get_share_data(file_path=None):
                     data_dict[name] = {'price': price, 'year': year, 'month': month}
 
     #Print the desired result
-    result =  'Company Name\tYear\tMonth\tMax.Price\n'
+    result =  '\nCompany Name\tYear\tMonth\tMax.Price\n\n'
     for company_name, analysis_dict in data_dict.items():
-        result += '%s\t%s\t%s\t%s\n' % (company_name, analysis_dict['year'], analysis_dict['month'], analysis_dict['price'])
+        result += '%s\t%s\t%s\t%d\n' % (company_name, analysis_dict['year'], analysis_dict['month'], analysis_dict['price'])
     return result
 
 
