@@ -36,7 +36,7 @@ def get_share_data(file_path=None):
     #Print the desired result
     result =  '\nCompany Name\tYear\tMonth\tMax.Price\n\n'
     for company_name, analysis_dict in data_dict.items():
-        result += '%s\t%s\t%s\t%d\n' % (company_name, analysis_dict['year'], analysis_dict['month'], analysis_dict['price'])
+        result += '%s\t\t%s\t%s\t%d\n' % (company_name, analysis_dict['year'], analysis_dict['month'], analysis_dict['price'])
     return result
 
 
